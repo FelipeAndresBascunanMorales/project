@@ -53,9 +53,11 @@ function App() {
             <CodePreview config={config} />
           </div>
         </div>
-        <div>
-          <AnimatedButton/>
-        </div>
+        {import.meta.env.MODE === 'development' && (
+          <div>
+            <AnimatedButton />
+          </div>
+        )}
       </main>
     </div>
   );
