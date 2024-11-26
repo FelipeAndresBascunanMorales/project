@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ButtonPreview } from './components/ButtonPreview';
 import { ConfigPanel } from './components/ConfigPanel';
 import { CodePreview } from './components/CodePreview';
-import { Wand2 } from 'lucide-react';
+import AnimatedLogo from './components/AnimatedLogo';
 
 function App() {
   const [config, setConfig] = useState<ButtonConfig>({
@@ -33,11 +33,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm">
+      <header className="bg-white shadow-sm p-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center space-x-2">
-            <img className='h-auto w-20 grayscale' src="../public/logo2.gif" alt="logo" />
-            <h1 className="text-2xl font-bold text-gray-900">Pleasant Button Generator</h1>
+            <AnimatedLogo />
+            <h1 className="text-2xl font-bold text-gray-800">Pleasant Button Generator for React</h1>
           </div>
         </div>
       </header>
