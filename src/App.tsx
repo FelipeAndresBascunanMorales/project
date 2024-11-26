@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { ButtonPreview } from './components/ButtonPreview';
 import { ConfigPanel } from './components/ConfigPanel';
 import { CodePreview } from './components/CodePreview';
-import AnimatedLogo from './components/AnimatedLogo';
+import AnimatedLogo from './components/ui/AnimatedLogo';
+import { AnimatedButton } from './components/AnimatedButton';
 
 function App() {
   const [config, setConfig] = useState<ButtonConfig>({
@@ -44,13 +45,16 @@ function App() {
 
       <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="space-y-8">
-            <ButtonPreview config={config} onClick={handleButtonClick} />
+          <div>
             <ConfigPanel config={config} onConfigChange={handleConfigChange} />
           </div>
-          <div>
+          <div className="space-y-8">
+            <ButtonPreview config={config} onClick={handleButtonClick} />
             <CodePreview config={config} />
           </div>
+        </div>
+        <div>
+          <AnimatedButton/>
         </div>
       </main>
     </div>
