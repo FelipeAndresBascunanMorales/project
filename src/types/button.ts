@@ -5,12 +5,14 @@ declare global {
     gradient: boolean;
     glow: boolean;
     showDecorative: boolean;
-    decorationType: 'stars' | 'sparkles';
+    decorationType: 'star' | 'sparkles';
     decorativePosition: 'left' | 'right' | 'center';
     showIcon: boolean;
-    iconType: 'bell' | 'heart' | 'phone';
+    iconType: 'Bell' | 'Heart' | 'Phone';
     iconAnimation: 'pulse' | 'bounce' | 'spin';
     showExplosion: boolean;
+    showRewrite: boolean;
+    rotateIcon: boolean;
     clicked: boolean;
   }
 }

@@ -12,12 +12,14 @@ function App() {
     gradient: true,
     glow: true,
     showDecorative: true,
-    decorationType: 'stars',
+    decorationType: 'star',
     decorativePosition: 'center',
     showIcon: true,
-    iconType: 'heart',
+    iconType: 'Heart',
     iconAnimation: 'pulse',
     showExplosion: true,
+    showRewrite: false,
+    rotateIcon: false,
     clicked: false,
   });
 
@@ -49,15 +51,15 @@ function App() {
             <ConfigPanel config={config} onConfigChange={handleConfigChange} />
           </div>
           <div className="space-y-8">
+            {import.meta.env.MODE === 'development' && (
+              <div>
+                <AnimatedButton />
+              </div>
+            )}
             <ButtonPreview config={config} onClick={handleButtonClick} />
             <CodePreview config={config} />
           </div>
         </div>
-        {import.meta.env.MODE === 'development' && (
-          <div>
-            <AnimatedButton />
-          </div>
-        )}
       </main>
     </div>
   );

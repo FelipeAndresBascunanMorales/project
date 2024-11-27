@@ -8,9 +8,9 @@ interface ButtonPreviewProps {
 }
 
 const icons = {
-  bell: Bell,
-  heart: Heart,
-  phone: Phone,
+  Bell: Bell,
+  Heart: Heart,
+  Phone: Phone,
 };
 
 const iconAnimations = {
@@ -29,6 +29,9 @@ const iconAnimations = {
 };
 
 export const ButtonPreview: React.FC<ButtonPreviewProps> = ({ config, onClick }) => {
+  
+  const Icon = config.showIcon ? icons[config.iconType] : null;
+
   const buttonVariants = {
     idle: {
       scale: 1,
@@ -85,7 +88,7 @@ export const ButtonPreview: React.FC<ButtonPreviewProps> = ({ config, onClick })
           delay: i * 0.2,
         }}
       >
-        {config.decorationType === 'stars' ? (
+        {config.decorationType === 'star' ? (
           <Star className="w-4 h-4 text-yellow-400" />
         ) : (
           <Sparkles className="w-4 h-4 text-purple-400" />
@@ -94,7 +97,6 @@ export const ButtonPreview: React.FC<ButtonPreviewProps> = ({ config, onClick })
     );
   });
 
-  const Icon = config.showIcon ? icons[config.iconType] : null;
 
   const explosionVariants = {
     hidden: { scale: 0, opacity: 0 },
