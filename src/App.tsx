@@ -38,9 +38,8 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm p-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-4 justify-center">
             <AnimatedLogo />
-            <h1 className="text-2xl font-bold text-gray-800">Pleasant Button Generator for React</h1>
           </div>
         </div>
       </header>
